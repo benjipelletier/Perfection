@@ -1,0 +1,22 @@
+{
+    "plugins": [
+        "org.apache.cordova.splashscreen",
+        "org.apache.cordova.statusbar",
+        "org.apache.cordova.media",
+        "mobi.monaca.plugins.Monaca"
+    ],
+    "framework_version": "3.5",
+    "xcode_version": "5",
+    "external_plugins": [],
+    "cordova_version": "4.1",
+    "title-ja": "",
+    "title-en": "Perfection",
+    "description-ja": "",
+    "description-en": "",
+    "category": "User Template",
+    "platform": [
+        "android",
+        "ios"
+    ],
+    "name": "generated-1469940195-54aa6fd07e21937017900e76"
+}

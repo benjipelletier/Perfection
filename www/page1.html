@@ -1,0 +1,98 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="center">Perfection</div>
+        
+
+            <div class="right">
+          <ons-toolbar-button>
+            <i class="fa fa-lg fa-question-circle" ng-click="myNavigator.pushPage('tut.html')" style="color: #2f2f2f"></i>
+          </ons-toolbar-button>
+    </ons-list-item>
+        </div>
+
+
+ 
+    </ons-toolbar>
+
+    <div class="main">
+    
+    <ons-carousel swipeable overscrollable auto-scroll var="carousel" class="amount" style="margin-top: 10px;">
+      <ons-carousel-item style="background-color: #2f2f2f;">
+        <div class="item-label">1 Note</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #FD7D01;">
+        <div class="item-label">2 Notes</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #2f2f2f;">
+        <div class="item-label">3 Notes</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #FD7D01;">
+        <div class="item-label">4 Notes</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #2f2f2f;">
+        <div class="item-label">5 Notes</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #FD7D01;">
+        <div class="item-label">6 Notes</div>
+      </ons-carousel-item>
+      <ons-carousel-cover><div class="cover-label">Swipe to choose a note amount</div></ons-carousel-cover>
+    </ons-carousel>
+    
+    <ons-carousel swipeable overscrollable auto-scroll var="difficulty" class="diff">
+      <ons-carousel-item style="background-color: #2f2f2f;">
+        <div class="item-label">1 Octave ± C4</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #FD7D01;">
+        <div class="item-label">2 Octaves ± C4</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #2f2f2f;">
+        <div class="item-label">All 88 Keys</div>
+      </ons-carousel-item>
+      <ons-carousel-cover><div class="cover-label">Swipe to choose difficulty</div></ons-carousel-cover>
+    </ons-carousel>
+    
+    <ons-carousel swipeable overscrollable auto-scroll var="accidental" class="acc">
+      <ons-carousel-item style="background-color: #2f2f2f;">
+        <div class="item-label">♭</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #FD7D01;">
+        <div class="item-label">♯</div>
+      </ons-carousel-item>
+      <ons-carousel-item style="background-color: #2f2f2f;">
+        <div class="item-label">♭/♯</div>
+      </ons-carousel-item>
+      <ons-carousel-cover><div class="cover-label">Swipe to choose accidental style</div></ons-carousel-cover>
+    </ons-carousel>
+    
+    
+    <ons-button class="button" ng-click="play(carousel.getActiveCarouselItemIndex()+1, difficulty.getActiveCarouselItemIndex(), accidental.getActiveCarouselItemIndex())">
+        Play Notes
+    </ons-button>
+    
+    <div class="again">
+        <ons-button class="button" ng-click="playAgain()">
+            Play Again
+        </ons-button>
+    </div>
+        
+    <div class="ans">
+    <ons-button class="button odd" ng-click="showAns()">
+        Show Answer
+    </ons-button>
+    </div>
+
+    <br />
+    
+    <h1 class="answers" ng-repeat="i in answers" ng-click="playInd(i)">
+    {{i.name}}
+    </h1>
+    
+
+        
+        
+    </div>
+
+</ons-page>
+
+
+
